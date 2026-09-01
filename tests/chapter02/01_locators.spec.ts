@@ -40,4 +40,7 @@ test("locators test", async ({ page }) => {
   await page.goto("https://www.google.com/");
   await page.getByTitle("Search").fill("avengers doomsday");
   await page.getByTitle("Search").press("Enter");
+  await page.goBack();
+  await page.getByTitle("Search").fill("spiderman");
+  await page.getByTitle("Search").press("Enter");
 });
